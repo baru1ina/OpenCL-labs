@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenCLCompute.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GPUContext.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="KernelSource.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Matrix.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenCLException.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenCLCompute.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUContext.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="KernelSource.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{63ff8a3b-7d24-413d-92b2-979bc85deb3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{e49c0c03-005d-48cf-9651-4a2a11be8176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{9d99413f-e218-407c-9749-d1bfb183d797}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
