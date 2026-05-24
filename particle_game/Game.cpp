@@ -1,4 +1,4 @@
-#include "game.h"
+#include "Game.h"
 
 #include <algorithm>
 #include <cmath>
@@ -7,12 +7,6 @@
 #include <stdexcept>
 #include <windows.h> 
 
-constexpr int KEY_UP = VK_UP;
-constexpr int KEY_DOWN = VK_DOWN;
-constexpr int KEY_LEFT = VK_LEFT;
-constexpr int KEY_RIGHT = VK_RIGHT;
-constexpr int KEY_NUMPAD_PLUS = VK_ADD;
-constexpr int KEY_NUMPAD_MINUS = VK_SUBTRACT;
 constexpr int KEY_C = 'C'; 
 
 namespace {

@@ -25,21 +25,6 @@
 
 using namespace DirectX;
 
-static XMMATRIX calculateViewMatrix(const XMFLOAT3& position, float lrAngle, float udAngle) {
-    XMVECTOR direction = XMVectorSet(
-        cosf(udAngle) * sinf(lrAngle),
-        sinf(udAngle),
-        cosf(udAngle) * cosf(lrAngle),
-        0.0f
-    );
-
-    XMVECTOR eyePos = XMVectorSet(position.x, position.y, position.z, 0.0f);
-    XMVECTOR focusPoint = XMVectorAdd(eyePos, direction);
-    XMVECTOR upDir = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
-
-    return XMMatrixLookAtLH(eyePos, focusPoint, upDir);
-}
-
 void Renderer::moveCamera(float dx, float dy, float dz) {
     cameraPosition_.x += dx * cameraSpeed_;
     cameraPosition_.y += dy * cameraSpeed_;

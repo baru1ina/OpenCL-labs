@@ -103,12 +103,6 @@ private:
     float lrAngle_ = 3.0f;
     float udAngle_ = -0.28f;  
 
-    bool mouseCaptured_ = false;
-    int lastMouseX_ = 0;
-    int lastMouseY_ = 0;
-    bool firstMouse_ = true;
-
-
     bool createDeviceAndSwapChain();
     bool createRenderTargets();
     bool initBufferShader();

@@ -65,7 +65,6 @@ private:
     bool initializeOpenCL();
     bool buildOpenCLProgram();
     bool createBuffers();
-    bool findDevice(const std::vector<cl_platform_id>& platforms, cl_device_type type);
     void releaseAll();
     bool setError(const std::string& message);
 };

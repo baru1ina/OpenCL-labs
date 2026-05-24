@@ -171,29 +171,6 @@ bool ParticleSystem::setError(const std::string& message)
     return false;
 }
 
-bool ParticleSystem::findDevice(const std::vector<cl_platform_id>& platforms, cl_device_type type)
-{
-    for (cl_platform_id platform : platforms)
-    {
-        cl_uint deviceCount = 0;
-        cl_int status = clGetDeviceIDs(platform, type, 0, nullptr, &deviceCount);
-
-        if (status == CL_DEVICE_NOT_FOUND || deviceCount == 0)
-            continue;
-
-        OPENCL_FAIL(status);
-
-        std::vector<cl_device_id> devices(deviceCount);
-        OPENCL_FAIL(clGetDeviceIDs(platform, type, deviceCount, devices.data(), nullptr));
-
-        platform_ = platform;
-        device_ = devices.front();
-        return true;
-    }
-
-    return false;
-}
-
 bool ParticleSystem::initializeOpenCL()
 {
     try
